@@ -1,0 +1,226 @@
+body {
+	font-family:arial, helvetica, sans-serif;
+	font-size: 100%;
+	background:#fff;
+	color: #333;
+	color: rgba(0,0,0,.8);
+}
+
+a {
+	color:#0000ff;
+	color: rgba(0,0,255,1);
+}
+
+a:hover {
+	color:#0000ff;
+	color: rgba(0,0,255,.75);
+}
+
+a:visited {
+	color:#0000ff;
+	color: rgba(0,0,255,.5);
+}
+
+ul, ol {
+	margin:0;
+	padding: .25em; 
+}
+
+h1, h2, h3 {
+	margin:.5em 0 0;
+	color: #333;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+h3 {
+	font-size: 1.25em;
+}
+
+img {
+	max-width:100%; /* make em respond */
+}
+
+section { /* main content area */
+	font-size: 90%;
+}
+
+article {
+	padding: 0 1em 1em;
+}
+
+header {
+	margin:0;
+	position: relative;
+}
+
+header h1,
+header h2 {
+	margin:.25em;
+}
+
+header h1 a,
+header h1 a:visited,
+header h1 a:active {
+	color: #fff !important;
+	text-decoration: none;
+}
+
+nav {
+	font-size: 90%;
+	margin:0;
+	padding:.25em;
+	background-color: #333;
+	background-color: rgba(0,0,0,.1);
+}
+
+nav li {display: inline-block;}
+
+nav a,
+nav a:visited {
+	text-decoration: none;
+	font-weight:bold;
+	padding-right:.25em;
+	border-right:1px solid #333;
+}
+
+nav a:hover {
+	border-right:1px solid #333;
+}
+
+nav li:last-child a {
+	border-right: 0;
+}
+
+footer {
+	color: #333;
+	padding: .5em;
+}
+
+footer nav li,
+footer nav {
+	display: block;
+}
+
+footer nav a {
+	display: block;
+	padding:.25em;
+	border:1px solid #333;
+}
+
+
+footer {
+	clear: both; 
+	padding:1em; 
+	margin:1em auto 0 auto;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+/* homemade grid */
+[class*="col"] {
+	float: left;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	padding:10px;
+}
+
+[class*="col"].floatR {float: right !important;} /* love it */
+
+.col25 {width:25%;}
+.col30 {width:30%;}
+.col33 {width:33%;}
+.col50 {width:50%;}
+.col66 {width:66%;}
+.col70 {width:70%;}
+.col75 {width:75%;}
+.col100 {width:100%;}
+
+/* specific overrides and rules */
+.members h4 {margin:0;}
+
+/* utilities */
+.floatL {float: left;}
+.floatR {float: right;}
+.noShow {display: none;}
+
+
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after,
+section:before,
+section:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after,
+section:after {
+    clear: both;
+}
+
+
+/* media queries for layout and background */
+
+@media all and (max-width: 500px) {
+	
+
+	.members {
+		text-align: center;
+	}
+
+	.members h4 {
+		display: inline-block;
+		margin:.25em;
+	}
+
+}
+
+@media all and (min-width: 500px) {
+
+	nav {
+		font-size: 100%;
+	}
+
+}
+
+@media all and (max-width: 600px) {
+	[class*="col"] {
+		float: none;
+		width:100%;
+	}
+
+}
+
+@media all and (min-width: 900px) {
+
+
+
+		/* very specific overrides */
+	.col70,
+	.col30 {width:50%;}
+
+
+
+}
+
+@media all and (min-width: 1201px) {
+	
+
+
+}
