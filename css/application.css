@@ -1,34 +1,34 @@
 body {
 	font-family:arial, helvetica, sans-serif;
 	font-size: 100%;
-	background:#fff;
-	color: #333;
+	color: #999;
 	color: rgba(0,0,0,.8);
 }
 
 a {
-	color:#0000ff;
-	color: rgba(0,0,255,1);
+	color:#FF6600;
+	color: rgba(255,102,0,1);
 }
 
 a:hover {
-	color:#0000ff;
-	color: rgba(0,0,255,.75);
+	color:#FF6600;
+	color: rgba(255,102,0,.75);
 }
 
 a:visited {
-	color:#0000ff;
-	color: rgba(0,0,255,.5);
+	color:#FF6600;
+	color: rgba(255,102,0,.5);
 }
 
 ul, ol {
-	margin:0;
+	margin:.25em 1em;
 	padding: .25em; 
 }
 
 h1, h2, h3 {
 	margin:.5em 0 0;
-	color: #333;
+	color: #999;
+	color: rgba(0,0,0,.8);
 }
 
 h1 {
@@ -65,19 +65,14 @@ header h2 {
 	margin:.25em;
 }
 
-header h1 a,
-header h1 a:visited,
-header h1 a:active {
-	color: #fff !important;
-	text-decoration: none;
-}
+
 
 nav {
 	font-size: 90%;
 	margin:0;
 	padding:.25em;
 	background-color: #333;
-	background-color: rgba(0,0,0,.1);
+	background-color: rgba(0,0,0,.7);
 }
 
 nav li {display: inline-block;}
@@ -87,19 +82,25 @@ nav a:visited {
 	text-decoration: none;
 	font-weight:bold;
 	padding-right:.25em;
-	border-right:1px solid #333;
+	border-right:1px solid #fff;
 }
 
 nav a:hover {
-	border-right:1px solid #333;
+	border-right:1px solid #fff;
 }
 
 nav li:last-child a {
 	border-right: 0;
 }
 
+header ul,
+footer ul {margin:0;}
+
 footer {
-	color: #333;
+	color: #fff;
+	color: rgba(255,255,255,.8);
+	background-color: #333;
+	background-color: rgba(0,0,0,.7);
 	padding: .5em;
 }
 
@@ -111,7 +112,7 @@ footer nav {
 footer nav a {
 	display: block;
 	padding:.25em;
-	border:1px solid #333;
+	border:1px solid #fff;
 }
 
 
@@ -121,6 +122,10 @@ footer {
 	margin:1em auto 0 auto;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
+}
+
+section li {
+	margin:.5em;
 }
 
 /* homemade grid */
@@ -143,13 +148,22 @@ footer {
 .col100 {width:100%;}
 
 /* specific overrides and rules */
-.members h4 {margin:0;}
+
+
 
 /* utilities */
 .floatL {float: left;}
 .floatR {float: right;}
 .noShow {display: none;}
+.clear {clear: both;}
 
+/* margin stuffs */
+.m-t {margin-top:.5em;}
+.m-b {margin-bottom:.5em;}
+.m-tb {margin:.5em 0;}
+
+.small {} /* use to show only when smaller than 900px - media query activated */
+.large {} /* use to show only when larger than 900px - media query activated  */ 
 
 
 /**
@@ -172,6 +186,60 @@ section:after {
 .cf:after,
 section:after {
     clear: both;
+}
+
+/* responsive video stuff */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* - See more at: http://avexdesigns.com/responsive-youtube-embed/#sthash.iXR5FTI6.dpuf */
+
+/* blockquote styles */
+blockquote {
+	font-family: Georgia, serif;
+	font-size: 1.2em;
+	font-style: italic;
+	margin: 0.25em 0;
+	padding: 0.25em 40px;
+	line-height: 1.45;
+	position: relative;
+	color: #999;
+	color: rgba(0,0,0,.8);
+}
+
+blockquote:before {
+	display: block;
+	content: "\201C";
+	font-size: 5em;
+	position: absolute;
+	left: -12px;
+	top: -12px;
+	color: #333;
+	color: rgba(0,0,0,.7);
+}
+
+blockquote cite {
+	color: #999;
+	color: rgba(0,0,0,.8);
+	font-size: .8em;
+	display: block;
+	margin-top: .25em;
+}
+ 
+blockquote cite:before {
+	content: "\2014 \2009";
 }
 
 
@@ -207,15 +275,29 @@ section:after {
 
 }
 
+@media all and (max-width:899px) {
+	.large {
+		display: none;
+	}
+}
+
+
+
 @media all and (min-width: 900px) {
 
+	body {
+		background:#3b3833 url(../assets/homeWebLow.jpg) no-repeat 0 0;
+		background-size: cover;
+	}
 
 
 		/* very specific overrides */
 	.col70,
 	.col30 {width:50%;}
 
-
+	.small {
+		display: none;
+	}
 
 }
 
