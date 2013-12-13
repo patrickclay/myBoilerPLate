@@ -11,7 +11,7 @@ a {
 }
 
 a:hover {
-	color:#FF6600;
+	color:#FF6600; /* your link color here */
 	color: rgba(255,102,0,.75);
 }
 
